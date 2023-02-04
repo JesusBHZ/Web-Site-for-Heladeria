@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Conexion con FontAwesome para hacer el uso de un kid de iconos-->
+    <script src="https://kit.fontawesome.com/042880e61d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Heladeria</title>
+</head>
+<body>
+    <header>
+        <img src="static/imagenes/LOGO.png" alt="" class="img_logo">
+    </header>
+    <section class="contenido_helados">
+        <div class="caja_helados">
+            <div class="cajas_opciones">
+                <h1>Helados</h1>
+                <br>
+                <hr>
+                <br>
+                
+                <label class="switchBtn" onclick="showTipo()">
+                    <input type="checkbox" id="tipo_helado">
+                    <div class="slide round" id="tipo">Clasico</div>
+                </label> 
+                <br>
+                <select name="select" class="helados_tamano">
+                    <option value="">Normal</option>
+                    <option value="">1/2 Litro</option>
+                    <option value="">1 Litro</option>
+                </select>
+                <br>
+                <select name="select" class="helados_sabores">
+                    <option value="">Arroz con leche</option>
+                    <option value="">Chocolate</option>
+                    <option value="">Fresas con crema</option>
+                    <option value="">Galleta</option>
+                    <option value="">Gloria</option>
+                    <option value="">Unicornio</option>
+                    <option value="">Nuez</option>
+                    <option value="">Menta con chocolate</option>
+                    <option value="">Ron con pasas</option>
+                    <option value="">Palanqueta</option>
+                    <option value="">Vainilla</option>
+                    <option value="">Yogurt Natural</option>
+                    <option value="">Sherbet de coco</option>
+                    <option value="">Nieve de Limon</option>
+                    <option value="">Nieve de mango</option>
+                </select>
+                <!--
+                <select name="select" class="helados_sabores">
+                    <option value="">Almendra</option>
+                    <option value="">Ate con queso</option>
+                    <option value="">Cafe irlandes</option>
+                    <option value="">Carajillo</option>
+                    <option value="">Banoffe</option>
+                    <option value="">Festin</option>
+                    <option value="">Cafe Latte</option>
+                    <option value="">Mediterraneo</option>
+                    <option value="">Monte blanco</option>
+                    <option value="">Rocky road</option>
+                    <option value="">Nieve mezcal</option>
+                    <option value="">Limon sin azucar</option>
+                </select>-->
 
+                <br>
+                <label class="switchBtn" onclick="showTama()">
+                    <input type="checkbox" id="tipo_tamano">
+                    <div class="slide round" id="tipotama">Sencillo</div>
+                </label> 
+                <br>
+                <select name="select" class="helados_envase">
+                    <option value="">Barquillo</option>
+                    <option value="">Canasta de galleta</option>
+                    <option value="">Vaso de crema</option>
+                </select>
+                <br>
+                <select name="select" class="helados_cobertura">
+                    <option value="">Ninguna</option>
+                    <option value="">2 Topping</option>
+                    <option value="">4 Topping</option>
+                </select>
+                <br>
+                
+
+                <br>
+                <div class="botones_helado">
+                    <button class="boton_helados" style="background-color: #4CF227;"><i class="fa-solid fa-check"></i></button>
+                    <button class="boton_helados" style="background-color: #F0530E;"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                   
+            </div>
+            <div class="cajas_opciones">
+                <h1>Paletas</h1>
+                <br>
+                <hr>
+                <div class="paletas">
+                    <div class="cajas_paletas_especiales">
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Ate con queso</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Chocolate</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Chocolate sin azucar</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Mazapan</label>
+                        </section>
+                    </div>
+                    <div class="cajas_paletas_crema">
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Yogurt con frutos rojos</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Fresa</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Nuez</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Menta con chocolate</label>
+                        </section>
+                    </div>
+                    <div class="cajas_paletas_agua">
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Limon</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Chilimango</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Menta</label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="cbox1" value=""> Tamachile</label>
+                        </section>
+                    </div>
+                    <div class="botones_helado">
+                        <button class="boton_helados" style="background-color: #4CF227;"><i class="fa-solid fa-check"></i></button>
+                        <button class="boton_helados" style="background-color: #F0530E;"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cajas_opciones">
+                <h1>Frappes</h1>
+                <br>
+                <hr>
+            </div>
+        </div>
+        <div class="caja_carrito">
+            <div class="cajas_compras">
+                p
+            </div>
+            <div class="cajas_total">
+                <h1 style="font-size: 50px;">$48</h1>
+            </div>
+        </div>
+    </section>
+
+    <script src="static/js/helados.js"></script>
+</body>
+</html>
