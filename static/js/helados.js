@@ -33,9 +33,18 @@ function heladosTotal(){
     if(tipo.checked==true){
         document.getElementById('option_tamano_2').innerHTML = '1/2 Litro $126';              
         document.getElementById('option_tamano_3').innerHTML = '1 Litro $229';              
+    }else{
+        document.getElementById('option_tamano_2').innerHTML = '1/2 Litro $107';              
+        document.getElementById('option_tamano_3').innerHTML = '1 Litro $194'; 
     }
 
     if(tamano == "1"){
+        p.style.display = '';
+        estilo.style.display = '';
+        document.getElementById('estiloo').style.display = '';
+        document.getElementById('p_estilo').style.display = '';
+        document.getElementById('envase').style.display = '';
+        document.getElementById('cobertura').style.display = '';
         if(tipo.checked==true && estilo.checked==true){
             total_final = 113;
             p.innerHTML = "$113";
