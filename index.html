@@ -23,37 +23,47 @@
                 <br>
                 <hr>
                 <br>
-                
-                <label class="switchBtn" onclick="showTipo()">
+                <p>Tipo</p>
+                <label class="switchBtn" onclick="showTipo(), heladosTotal()">
                     <input type="checkbox" id="tipo_helado">
-                    <div class="slide round" id="tipo">Clasico</div>
-                </label> 
+                    <div class="slide round" id="tipo">Clasico</div> 
+                    <p style="margin-left: -40px;margin-top: 8px;" id="valorP">$48</p>
+                </label>
+
+                <label class="switchBtn" onclick="showTipo(), heladosTotal()" style="display: none;">
+                    <input type="checkbox" id="tipo_helado">
+                    <div class="slide round" id="tipo">Clasico</div> 
+                    <p style="margin-left: -40px;margin-top: 8px;" id="valorP">$48</p>
+                </label>
                 <br>
-                <select name="select" class="helados_tamano">
-                    <option value="">Normal</option>
-                    <option value="">1/2 Litro</option>
-                    <option value="">1 Litro</option>
+                <select name="select" class="helados_tamano" id="tamano" onclick="heladosTotal()">
+                    <option value="1">Tamano (Normal)</option>
+                    <option value="2" id="option_tamano_2">1/2 Litro $107</option>
+                    <option value="3" id="option_tamano_3">1 Litro $194</option>
                 </select>
+                
                 <br>
-                <select name="select" class="helados_sabores">
-                    <option value="">Arroz con leche</option>
-                    <option value="">Chocolate</option>
-                    <option value="">Fresas con crema</option>
-                    <option value="">Galleta</option>
-                    <option value="">Gloria</option>
-                    <option value="">Unicornio</option>
-                    <option value="">Nuez</option>
-                    <option value="">Menta con chocolate</option>
-                    <option value="">Ron con pasas</option>
-                    <option value="">Palanqueta</option>
-                    <option value="">Vainilla</option>
-                    <option value="">Yogurt Natural</option>
-                    <option value="">Sherbet de coco</option>
-                    <option value="">Nieve de Limon</option>
-                    <option value="">Nieve de mango</option>
+                <select name="select" class="helados_sabores" id="sabores" onclick="heladosTotal()">
+                    <option disabled selected value="0">Pero mira cuantos sabores</option>
+                    <option value="1">Arroz con leche</option>
+                    <option value="2">Chocolate</option>
+                    <option value="3">Fresas con crema</option>
+                    <option value="4">Galleta</option>
+                    <option value="5">Gloria</option>
+                    <option value="6">Unicornio</option>
+                    <option value="7">Nuez</option>
+                    <option value="8">Menta con chocolate</option>
+                    <option value="9">Ron con pasas</option>
+                    <option value="10">Palanqueta</option>
+                    <option value="11">Vainilla</option>
+                    <option value="12">Yogurt Natural</option>
+                    <option value="13">Sherbet de coco</option>
+                    <option value="14">Nieve de Limon</option>
+                    <option value="15">Nieve de mango</option>
                 </select>
-                <!--
-                <select name="select" class="helados_sabores">
+                
+                <select name="select" class="helados_sabores" id="sabores2" style="display: none;">
+                    <option disabled selected value="0">Pero mira cuantos sabores</option>
                     <option value="">Almendra</option>
                     <option value="">Ate con queso</option>
                     <option value="">Cafe irlandes</option>
@@ -66,31 +76,35 @@
                     <option value="">Rocky road</option>
                     <option value="">Nieve mezcal</option>
                     <option value="">Limon sin azucar</option>
-                </select>-->
+                </select>
 
                 <br>
-                <label class="switchBtn" onclick="showTama()">
-                    <input type="checkbox" id="tipo_tamano">
-                    <div class="slide round" id="tipotama">Sencillo</div>
+                <p id="p_estilo">Estilo</p>
+                <label class="switchBtn" onclick="showTama(), heladosTotal()" id="estiloo">
+                    <input type="checkbox" id="tipo_tamano" value="48">
+                    <div class="slide round" id="tipoestillo">Sencillo</div>
+                    <p style="margin-left: -40px;margin-top: 8px;" id="valorP2">$48</p>
                 </label> 
                 <br>
-                <select name="select" class="helados_envase">
-                    <option value="">Barquillo</option>
-                    <option value="">Canasta de galleta</option>
-                    <option value="">Vaso de crema</option>
+                <select name="select" class="helados_envase" id="envase" onclick="heladosTotal()">
+                    <option disabled selected value="0">Selecciona tu envase</option>
+                    <option value="1">Barquillo $4</option>
+                    <option value="2">Canasta de galleta $10</option>
+                    <option value="3">Vaso de crema  $28</option>
                 </select>
                 <br>
-                <select name="select" class="helados_cobertura">
-                    <option value="">Ninguna</option>
-                    <option value="">2 Topping</option>
-                    <option value="">4 Topping</option>
+                <select name="select" class="helados_cobertura" id="cobertura" onclick="heladosTotal(), heladosTotal()">
+                    <option disabled selected value="0">¿Y tu cobertura?</option>
+                    <option value="1">Ninguna</option>
+                    <option value="2">2 Topping $13</option>
+                    <option value="3">4 Topping $26</option>
                 </select>
                 <br>
                 
 
                 <br>
                 <div class="botones_helado">
-                    <button class="boton_helados" style="background-color: #4CF227;"><i class="fa-solid fa-check"></i></button>
+                    <button class="boton_helados" style="background-color: #4CF227;" onclick="listo()"><i class="fa-solid fa-check"></i></button>
                     <button class="boton_helados" style="background-color: #F0530E;"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                    
@@ -159,7 +173,11 @@
                 p
             </div>
             <div class="cajas_total">
-                <h1 style="font-size: 50px;">$48</h1>
+                <h1 style="font-size: 50px;" id="total">$48</h1>
+                
+                <h1 stylle="" id="helados_total">Helados: $0</h3>
+                <h1 stylle="" id="paletas_total">Paletas: </h1>
+                <h1 stylle="" id="frappes_total">Frappes: </h1>
             </div>
         </div>
     </section>
