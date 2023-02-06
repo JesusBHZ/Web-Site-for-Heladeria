@@ -100,7 +100,9 @@
                     <option value="3">4 Topping $26</option>
                 </select>
                 <br>
-                
+                <label for="" onclick="paletasEspeciales()"> Cantidad:    
+                    <input id="cantidadHelados" type="number" value="1" min="1" max="100"/>
+                </label>
 
                 <br>
                 <div class="botones_helado">
@@ -115,50 +117,83 @@
                 <hr>
                 <div class="paletas">
                     <div class="cajas_paletas_especiales">
-                        <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Ate con queso</label>
+                        <section style="margin-bottom: 10px;">
+                            <h1>Especiales ........... $37</h1>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Chocolate</label>
+                            <label><input type="checkbox" id="especial_1" value="1" onclick=""> Ate con queso:   
+                                <input id="numberE1" type="number" value="1" min="1" max="100" />
+                            </label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Chocolate sin azucar</label>
+                            <label><input type="checkbox" id="especial_2" value="2" onclick=""> Chocolate: 
+                                <input id="numberE2" type="number" value="1" min="1" max="100" />
+                            </label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Mazapan</label>
+                            <label><input type="checkbox" id="especial_3" value="3" onclick=""> Chocolate sin azucar: 
+                                <input id="numberE3" type="number" value="1" min="1" max="100" />
+                            </label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="especial_4" value="4" onclick=""> Mazapan: 
+                                <input id="numberE4" type="number" value="1" min="1" max="100" />
+                            </label>
+                        </section>
+                        <section>
+                            <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>
+                            <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
                         </section>
                     </div>
                     <div class="cajas_paletas_crema">
-                        <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Yogurt con frutos rojos</label>
+                        <section style="margin-bottom: 10px;">
+                            <h1>Crema de leche ....... $32</h1>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Fresa</label>
+                            <label><input type="checkbox" id="crema_1" value="1"> Yogurt con frutos rojos:
+                            <input id="numberC1" type="number" value="1" min="1" max="100" /></label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Nuez</label>
+                            <label><input type="checkbox" id="crema_2" value="2"> Fresa:
+                            <input id="numberC2" type="number" value="1" min="1" max="100" /></label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Menta con chocolate</label>
+                            <label><input type="checkbox" id="crema_3" value="3"> Nuez:
+                            <input id="numberC3" type="number" value="1" min="1" max="100" /></label>
+                        </section>
+                        <section>
+                            <label><input type="checkbox" id="crema_4" value="4"> Menta con chocolate:
+                            <input id="numberC4" type="number" value="1" min="1" max="100" /></label>
+                        </section>
+                        <section>
+                            <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>
+                            <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
                         </section>
                     </div>
                     <div class="cajas_paletas_agua">
-                        <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Limon</label>
+                        <section style="margin-bottom: 10px;">
+                            <h1>Agua ................. $24</h1>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Chilimango</label>
+                            <label><input type="checkbox" id="agua_1" value="1"> Limon 
+                            <input id="numberA1" type="number" value="1" min="1" max="100" /></label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Menta</label>
+                            <label><input type="checkbox" id="agua_2" value="2"> Chiliango: 
+                            <input id="numberA2" type="number" value="1" min="1" max="100" /></label>
                         </section>
                         <section>
-                            <label><input type="checkbox" id="cbox1" value=""> Tamachile</label>
+                            <label><input type="checkbox" id="agua_3" value="3"> Menta 
+                            <input id="numberA3" type="number" value="1" min="1" max="100" /></label>
                         </section>
-                    </div>
-                    <div class="botones_helado">
-                        <button class="boton_helados" style="background-color: #4CF227;"><i class="fa-solid fa-check"></i></button>
-                        <button class="boton_helados" style="background-color: #F0530E;"><i class="fa-solid fa-xmark"></i></button>
+                        <section>
+                            <label><input type="checkbox" id="agua_4" value="4"> Tamacile: 
+                            <input id="numberA4" type="number" value="1" min="1" max="100" /></label>
+                        </section>
+                        <section>
+                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>
+                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
+                    </section>
                     </div>
                 </div>
             </div>
@@ -166,6 +201,70 @@
                 <h1>Frappes</h1>
                 <br>
                 <hr>
+                <div>
+                    <section style="margin-bottom: 10px;">
+                        <h1>Frappé de leche ....... $74</h1>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_1" value="1"> Cafe:
+                        <input id="numberC1" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_2" value="2"> Horchata:
+                        <input id="numberC2" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_3" value="3"> Horchata-café:
+                        <input id="numberC3" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_4" value="4"> Moka:
+                        <input id="numberC4" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>
+                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div>
+                    <section style="margin-bottom: 10px;">
+                        <h1>Frappé de agua ....... $74</h1>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_1" value="1"> Mango:
+                        <input id="numberC1" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_2" value="2"> Jamaica:
+                        <input id="numberC2" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_3" value="3"> Tamarindo:
+                        <input id="numberC3" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>    
+                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div>
+                    <section style="margin-bottom: 10px;">
+                        <h1>Frappé helado clasico $92</h1>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_1" value="1">
+                        <input id="numberC1" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>    
+                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div>
+                    <section style="margin-bottom: 10px;">
+                        <h1>Frappé helado especial $107</h1>
+                    </section>
+                    <section>
+                        <label><input type="checkbox" id="crema_1" value="1">
+                        <input id="numberC1" type="number" value="1" min="1" max="100" /></label>
+                    </section>
+                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>    
+                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
             </div>
         </div>
         <div class="caja_carrito">
@@ -176,8 +275,8 @@
                 <h1 style="font-size: 50px;" id="total">$48</h1>
                 
                 <h1 stylle="" id="helados_total">Helados: $0</h3>
-                <h1 stylle="" id="paletas_total">Paletas: </h1>
-                <h1 stylle="" id="frappes_total">Frappes: </h1>
+                <h1 stylle="" id="paletas_total">Paletas: $0</h1>
+                <h1 stylle="" id="frappes_total">Frappes: $0</h1>
             </div>
         </div>
     </section>

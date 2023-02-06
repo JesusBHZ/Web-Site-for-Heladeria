@@ -29,13 +29,20 @@ function heladosTotal(){
     let total = document.getElementById('helados_total');
     let p = document.getElementById('valorP');
     let p2 = document.getElementById('valorP2');
+    let cantidadH = document.getElementById('cantidadHelados').value;
+
+
     var total_final = 48;
     if(tipo.checked==true){
         document.getElementById('option_tamano_2').innerHTML = '1/2 Litro $126';              
-        document.getElementById('option_tamano_3').innerHTML = '1 Litro $229';              
+        document.getElementById('option_tamano_3').innerHTML = '1 Litro $229';
+        document.getElementById('sabores2').style.display = '';
+        document.getElementById('sabores').style.display = 'none';
     }else{
         document.getElementById('option_tamano_2').innerHTML = '1/2 Litro $107';              
         document.getElementById('option_tamano_3').innerHTML = '1 Litro $194'; 
+        document.getElementById('sabores2').style.display = 'none';
+        document.getElementById('sabores').style.display = '';
     }
 
     if(tamano == "1"){
@@ -119,6 +126,7 @@ function heladosTotal(){
         }
     }
     console.log(total_final)
+    total_final = total_final * cantidadH;
     total.innerHTML = "Helados: $"+total_final;
 }
 
@@ -132,6 +140,80 @@ function listo(){
     let total = document.getElementById('total');
 
     if(tamano == "0" || sabor == "0" || envase == "0" || cobertura == "0"){
-        alert("Debes seleccionar todas las opciones")
+        alert("Debes seleccionar todas las opciones");
     }
+}
+
+
+
+
+function paletasEspeciales(){
+    let total_paletas = document.getElementById('paletas_total');
+    var total_paletasEspecial = 0;
+    var cantidadE1 = 0;
+    var cantidadE2 = 0;
+    var cantidadE3 = 0;
+    var cantidadE4 = 0;
+
+
+    // ESPECIALES
+    if(document.getElementById('especial_1').checked==true){
+        var ate = "Ate";
+        cantidadE1 = document.getElementById('numberE1').value;
+        if(Math.floor(cantidadE1) < 0 || Math.floor(cantidadE1) > 100){
+            alert("La cantidad no puede ser negativa o mas de 100")
+        }
+    }
+    if(document.getElementById('especial_2').checked==true){
+        var chocolate= "Chocolate";
+        cantidadE2 = document.getElementById('numberE2').value;
+        if(Math.floor(cantidadE2) < 0 || Math.floor(cantidadE2) > 100){
+            alert("La cantidad no puede ser negativa o mas de 100")
+        }
+        
+    }
+    if(document.getElementById('especial_3').checked==true){
+        var chocosA = "Choco sin azucar";
+        cantidadE3 = document.getElementById('numberE3').value;
+        if(Math.floor(cantidadE3) < 0 || Math.floor(cantidadE3) > 100){
+            alert("La cantidad no puede ser negativa o mas de 100")
+        }
+        
+    }
+    if(document.getElementById('especial_4').checked==true){
+        var mazapan = "Mazapan";
+        cantidadE4 = document.getElementById('numberE4').value;
+        if(Math.floor(cantidadE4) < 0 || Math.floor(cantidadE4) > 100){
+            alert("La cantidad no puede ser negativa o mas de 100")
+        }
+    }
+
+
+    
+
+    //console.log(especiales)
+    total_paletasEspecial = Math.floor(cantidadE1) + Math.floor(cantidadE2) + Math.floor(cantidadE3) + Math.floor(cantidadE4); 
+    total_paletasEspecial = total_paletasEspecial * 37;
+    total_paletas.innerHTML = "Paletas: $"+total_paletasEspecial;
+
+
+
+
+    /*var paletasEspeciales = paletasEspeciales.push({ 
+        "nombre"    : arrayNombres[i],
+        "apellido"  : arrayApellido[i],
+        "ciudad"    : arrayCiudad[i] 
+    });*/
+
+}
+
+function borrarPaletasEspeciales(){
+    document.getElementById('especial_1').checked = false;
+    document.getElementById('especial_2').checked = false;
+    document.getElementById('especial_3').checked = false;
+    document.getElementById('especial_4').checked = false;
+    document.getElementById('numberE1').value = 1;
+    document.getElementById('numberE2').value = 1;
+    document.getElementById('numberE3').value = 1;
+    document.getElementById('numberE4').value = 1;
 }
