@@ -148,15 +148,22 @@ function listo(){
 
 
 function paletasEspeciales(){
+    // traer el texto
     let total_paletas = document.getElementById('paletas_total');
+        // ESPECIALES ---------------------------------------- 153 - 203
+
+    // total solo de las especiales
     var total_paletasEspecial = 0;
+    
+    
+    
+    // cantidad especiales 
     var cantidadE1 = 0;
     var cantidadE2 = 0;
     var cantidadE3 = 0;
     var cantidadE4 = 0;
 
 
-    // ESPECIALES
     if(document.getElementById('especial_1').checked==true){
         var ate = "Ate";
         cantidadE1 = document.getElementById('numberE1').value;
@@ -194,6 +201,7 @@ function paletasEspeciales(){
     //console.log(especiales)
     total_paletasEspecial = Math.floor(cantidadE1) + Math.floor(cantidadE2) + Math.floor(cantidadE3) + Math.floor(cantidadE4); 
     total_paletasEspecial = total_paletasEspecial * 37;
+
     total_paletas.innerHTML = "Paletas: $"+total_paletasEspecial;
 
 
