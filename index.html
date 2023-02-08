@@ -19,11 +19,12 @@
     </header>
     <section class="contenido_helados">
         <div class="caja_helados">
-            <div class="cajas_opciones">
+            <div class="cajas_opciones" id="helados_container">
                 <h1>Helados</h1>
                 <br>
                 <hr>
                 <br>
+                <p style="margin-left: -0px;margin-top: 8px; display: none;" id="valorP" class="text">$48</p>
                 <p>Tipo</p>
                 <label class="switchBtn" onclick="showTipo(), heladosTotal()">
                     <input type="checkbox" id="tipo_helado">
@@ -112,7 +113,7 @@
                 </div>
                    
             </div>
-            <div class="cajas_opciones">
+            <div class="cajas_opciones_paletas" id="paletas_container">
                 <h1>Paletas</h1>
                 <br>
                 <hr>
@@ -141,7 +142,7 @@
                                 <input id="numberE4" type="number" value="1" min="1" max="100" />
                             </label>
                         </section>
-                        <section>
+                        <section class="botones_cajas">
                             <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasEspeciales()"><i class="fa-solid fa-check"></i></button>
                             <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasEspeciales()"><i class="fa-solid fa-xmark"></i></button>
                         </section>
@@ -166,14 +167,14 @@
                             <label><input type="checkbox" id="crema_4" value="4"> Menta con chocolate:
                             <input id="numberC4" type="number" value="1" min="1" max="100" /></label>
                         </section>
-                        <section>
+                        <section class="botones_cajas">
                             <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasCrema()"><i class="fa-solid fa-check"></i></button>
                             <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasCrema()"><i class="fa-solid fa-xmark"></i></button>
                         </section>
                     </div>
                     <div class="cajas_paletas_agua">
                         <section style="margin-bottom: 10px;">
-                            <h1>Agua ................. $24</h1>
+                            <h1 id="agua">Agua ................. $24</h1>
                         </section>
                         <section>
                             <label><input type="checkbox" id="agua_1" value="1"> Limon 
@@ -191,10 +192,10 @@
                             <label><input type="checkbox" id="agua_4" value="4"> Tamacile: 
                             <input id="numberA4" type="number" value="1" min="1" max="100" /></label>
                         </section>
-                        <section>
-                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="paletasAgua()"><i class="fa-solid fa-check"></i></button>
-                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarPaletasAgua()"><i class="fa-solid fa-xmark"></i></button>
-                    </section>
+                        <section class="botones_cajas" id="botons">
+                            <button class="boton_paletas" id="botones_raros" style="background-color: #4CF227;" onclick="paletasAgua()"><i class="fa-solid fa-check"></i></button>
+                            <button class="boton_paletas" id="botones_raros" style="background-color: #F0530E;" onclick="borrarPaletasAgua()"><i class="fa-solid fa-xmark"></i></button>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -202,7 +203,7 @@
                 <h1>Frappes</h1>
                 <br>
                 <hr>
-                <div>
+                <div class="frappes_cajas">
                     <section style="margin-bottom: 10px;">
                         <h1>Frappé de leche ....... $74</h1>
                     </section>
@@ -222,10 +223,12 @@
                         <label><input type="checkbox" id="frappe_leche_4" value="4"> Moka:
                         <input id="numberFL4" type="number" value="1" min="1" max="100" /></label>
                     </section>
-                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeLeche()"><i class="fa-solid fa-check"></i></button>
-                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeLeche()"><i class="fa-solid fa-xmark"></i></button>
+                    <section class="botones_cajas">
+                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeLeche()"><i class="fa-solid fa-check"></i></button>
+                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeLeche()"><i class="fa-solid fa-xmark"></i></button>
+                    </section>
                 </div>
-                <div>
+                <div class="frappes_cajas" style="margin-top: 5px;">
                     <section style="margin-bottom: 10px;">
                         <h1>Frappé de agua ....... $74</h1>
                     </section>
@@ -241,10 +244,12 @@
                         <label><input type="checkbox" id="frappe_agua_3" value="3"> Tamarindo:
                         <input id="numberFA3" type="number" value="1" min="1" max="100" /></label>
                     </section>
-                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeAgua()"><i class="fa-solid fa-check"></i></button>    
-                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeAgua()"><i class="fa-solid fa-xmark"></i></button>
+                    <section class="botones_cajas">
+                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeAgua()"><i class="fa-solid fa-check"></i></button>    
+                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeAgua()"><i class="fa-solid fa-xmark"></i></button>
+                    </section>
                 </div>
-                <div>
+                <div class="frappes_cajas" style="margin-top: 10px;">
                     <section style="margin-bottom: 10px;">
                         <h1>Frappé helado clasico $92</h1>
                     </section>
@@ -252,10 +257,12 @@
                         <label><input type="checkbox" id="helado_clasico_1" value="1">Cantidad:
                         <input id="numberHC1" type="number" value="1" min="1" max="100" /></label>
                     </section>
-                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeHeladoClasico()"><i class="fa-solid fa-check"></i></button>    
-                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeHeladoClasico()"><i class="fa-solid fa-xmark"></i></button>
+                    <section class="botones_cajas">
+                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeHeladoClasico()"><i class="fa-solid fa-check"></i></button>    
+                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeHeladoClasico()"><i class="fa-solid fa-xmark"></i></button>
+                    </section>
                 </div>
-                <div>
+                <div class="frappes_cajas" style="margin-top: 10px;">
                     <section style="margin-bottom: 10px;">
                         <h1>Frappé helado especial $107</h1>
                     </section>
@@ -263,8 +270,10 @@
                         <label><input type="checkbox" id="helado_especial_1" value="1">Cantidad:
                         <input id="numberHE1" type="number" value="1" min="1" max="100" /></label>
                     </section>
-                    <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeHeladoEspecial()"><i class="fa-solid fa-check"></i></button>    
-                    <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeHeladoEspecial()"><i class="fa-solid fa-xmark"></i></button>
+                    <section class="botones_cajas">
+                        <button class="boton_paletas" style="background-color: #4CF227;" onclick="frappeHeladoEspecial()"><i class="fa-solid fa-check"></i></button>    
+                        <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrarFrappeHeladoEspecial()"><i class="fa-solid fa-xmark"></i></button>
+                    </section>
                 </div>
             </div>
         </div>
@@ -274,7 +283,7 @@
                 </div>
             </div>
             <div class="cajas_total">
-                <section>
+                <section class="botones_cajas">
                     <button class="boton_paletas" style="background-color: #4CF227;" onclick="comprar()"><i class="fa-solid fa-check"></i></button>    
                     <button class="boton_paletas" style="background-color: #F0530E;" onclick="borrar()"><i class="fa-solid fa-xmark"></i></button>
                 </section>
@@ -283,6 +292,9 @@
                 <h1 stylle="" id="paletas_total">Paletas: $0</h1>
                 <h1 stylle="" id="frappes_total">Frappes: $0</h1>
             </div>
+        </div>
+        <div class="espace">
+
         </div>
     </section>
 

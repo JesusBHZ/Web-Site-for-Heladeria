@@ -30,7 +30,7 @@ h2{
 }
 .caja_helados{
     width: 78%;
-    height: 100%;
+    height: 98%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -39,11 +39,28 @@ h2{
 .cajas_opciones{
     width: 25%;
     height: 100%;
-    background-color: turquoise;
+    background-color: #EBE1D7;
+    border: 2px solid black;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.cajas_opciones_paletas{
+    width: 25%;
+    height: 100%;
+    background-color: #EBE1D7;
+    border: 2px solid black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frappes_cajas{
+    width: 100%;
+    margin-left: 10px;
 }
 hr{
     width: 88%;
@@ -69,8 +86,8 @@ hr{
 
 .boton_helados{
     width: 40%;
-    height: 35px;
-    font-size: 25px;
+    height: 25px;
+    font-size: 18px;
 }
 .boton_paletas{
     width: 35%;
@@ -86,37 +103,41 @@ hr{
     width: 100%;
     height: 100%;
     display:flex ;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
 }
 .cajas_paletas_especiales{
-    background-color: tomato;
-    width: 100%;
+    /*background-color:#609EA2;*/
+    width:100%;
     height: 32%;
+    margin-left: 10px;
 }
 .cajas_paletas_crema{
-    background-color:teal;
+    /*background-color:#C92C6D;*/
     width: 100%;
     height: 32%;
+    margin-left: 10px;
 }
 .cajas_paletas_agua{
-    background-color:blueviolet;
+    /*background-color:#332C39;*/
     width: 100%;
     height: 32%;
+    margin-left: 10px;
 }
 
 .caja_carrito{
     width: 20%;
-    height: 98%;
-    background-color: yellow;
+    height: 99%;
+    background-color:#EBE1D7;
+    border: 2px solid black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
 
-#numberE1,#numberE2,#numberE3,#numberE4,#numberC1,#numberC2,#numberC3,#numberC4,#numberA1,#numberA2,#numberA3,#numberA4{
+#numberE1,#numberE2,#numberE3,#numberE4,#numberC1,#numberC2,#numberC3,#numberC4,#numberA1,#numberA2,#numberA3,#numberA4,#numberFL1,#numberFL2,#numberFL3,#numberFL4,#numberFA1,#numberFA2,#numberFA3,#numberHC1,#numberHE1{
     width: 60px;
     background-color: transparent;
     border: none;
@@ -124,9 +145,8 @@ hr{
 
 .cajas_compras{
 	height: 80%;
-	width: 100%;
+	width: 98%;
 	border: 1px solid #ddd;
-	background: #f1f1f1;
 	overflow-y: scroll;
 }
 #mensajes {
@@ -141,6 +161,13 @@ hr{
     margin-right: 10px;
 }
 
+.botones_cajas{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
 
 /* BOTONES */
 .switchBtn {
@@ -157,7 +184,7 @@ hr{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #F2921D;
     -webkit-transition: .4s;
     transition: .4s;
     padding: 8px;
@@ -175,7 +202,7 @@ hr{
     transition: .4s;
 }
 input:checked + .slide {
-    background-color: #8CE196;
+    background-color: #698269;
     padding-left: 40px;
 }
 input:focus + .slide {
@@ -193,3 +220,182 @@ input:checked + .slide:before {
 .slide.round:before {
     border-radius: 50%;
 }
+
+
+@media (max-width: 1300px) {
+    .img_logo{
+        width: 10%;
+    }
+    .contenido_helados{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url(../imagenes/fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .caja_helados{
+        width: 78%;
+        height: 96%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .cajas_opciones{
+        width: 25%;
+        height: 98%;
+        background-color: #EBE1D7;
+        border: 2px solid black;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .cajas_opciones_paletas{
+        width: 25%;
+        height: 98%;
+        background-color: #EBE1D7;
+        border: 2px solid black;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .caja_carrito{
+        width: 20%;
+        height: 96%;
+        margin-top: -12px;
+        background-color:#EBE1D7;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+  }
+  @media (max-width: 1100px) {
+    .img_logo{
+        width: 20%;
+    }
+    .contenido_helados{
+        width: 100%;
+        height: 650px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url(../imagenes/fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .contenido_helados{
+        width: 100%;
+        height: 700px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url(../imagenes/fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div.cajas_opciones>select{
+        width: 70%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .img_logo{
+        width: 25%;
+    }
+    .contenido_helados{
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        background-image: url(../imagenes/fondo.jpg);
+    }
+    .caja_helados{
+        width: 78%;
+        height: 96%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+    }
+    
+    .cajas_opciones{
+        width: 100%;
+        height: auto;
+        background-color: #EBE1D7;
+        border: 2px solid black;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .cajas_opciones_paletas{
+        width: 100%;
+        height:auto;
+        background-color: #EBE1D7;
+        border: 2px solid black;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .caja_carrito{
+        width: 80%;
+        height: auto;
+        background-color:#EBE1D7;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 790px;
+        border: 2px solid black;
+        padding-top: 20px;
+        border-radius: 30px;
+    }
+    #helados_container{
+        margin-top: 650px;
+    }
+    div.botones_helado{
+        padding-bottom: 50px;
+    }
+    div.frappes_cajas{
+        padding-bottom: 40px;
+    }
+    div.cajas_paletas_agua{
+        padding-bottom: 40px;
+    }
+    div.espace{
+        width: 100%;
+        height: 40px;
+    }
+    .cajas_compras{
+        height: 30%;
+        width: 98%;
+        border: 1px solid #ddd;
+        overflow-y: scroll;
+    }
+
+  }
