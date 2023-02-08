@@ -115,10 +115,6 @@ hr{
     align-items: center;
     flex-direction: column;
 }
-.cajas_compras{
-    width: 100%;
-    height: 90%;
-}
 
 #numberE1,#numberE2,#numberE3,#numberE4,#numberC1,#numberC2,#numberC3,#numberC4,#numberA1,#numberA2,#numberA3,#numberA4{
     width: 60px;
@@ -126,7 +122,24 @@ hr{
     border: none;
 }
 
-
+.cajas_compras{
+	height: 80%;
+	width: 100%;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+}
+#mensajes {
+	height: auto;
+}
+.compra {
+	padding:4px;
+	background:#fff;
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
 
 
 /* BOTONES */
